@@ -9,10 +9,11 @@ body {
 	background-color: #F4F4F4;
 	font-family: Roboto,Helvetica,Arial;
 }
-header{
+.clearfix:after{
+	content: ' ';
+	display: block;
 	width: 100%;
-	height: 200px;
-	background-color: #189EFF;
+	clear: both;
 }
 h4{
 	color: #333333;
@@ -20,6 +21,12 @@ h4{
     font-size: 18px;
     font-weight: 400;
 }
+header{
+	width: 100%;
+	height: 200px;
+	background-color: #189EFF;
+}
+
 header div:nth-child(1){
 	width: 100%;
 	height: 25%;
@@ -43,12 +50,7 @@ header div:nth-child(3){
 	background-color: transparent;
 	margin: 10px auto;
 }
-#mainContent:after{
-	content: ' ';
-	display: block;
-	width: 100%;
-	clear: both;
-}
+
 #mainContent >div{
 	float: left;
 	width: 100%;
@@ -119,13 +121,13 @@ header div:nth-child(3){
 /*----------------------------------------------------------------------------------*/
 #banner{
 	width: 100%;
-	height: 150px;
+	min-height: 150px;
 	background-color: transparent;
 	margin: 35px 0px 15px;
 }
 #banner >div {
 	width: 23.5%;
-	height:100%; 
+	height:150px; 
 	margin-right: 2%;
 	background-image: linear-gradient(to right ,#0D64FE,#22C7F1);
 	float: left;
@@ -136,7 +138,7 @@ header div:nth-child(3){
 }
 /*----------------------------------------------------------------------------------*/
 #viewedProducts{
-	height: 460px;
+	min-height: 460px;
 	width: 100%;
 	background-color: transparent;
 
@@ -192,7 +194,6 @@ header div:nth-child(3){
 /*----------------------------------------------------------------------------------*/
 #hotSlide{
 	width: 100%;
-	height: 265px;
 	margin-top: 20px;
 	background-color: transparent;
 }
@@ -217,7 +218,6 @@ header div:nth-child(3){
 /*----------------------------------------------------------------------------------*/
 #hotKey{
 	width: 100%;
-	height: 120px;
 	margin-top: 20px;
 	background-color: transparent;
 }
@@ -235,6 +235,9 @@ header div:nth-child(3){
 	float: right;
 }
 /*----------------------------------------------------------------------------------*/
+#productForYou {
+	margin-top: 10px;
+}
 #productForYou >div{
 	background-color: #ffffff;
 	height: 770px;
